@@ -1,0 +1,385 @@
+{
+  "formatName": "dexie",
+  "formatVersion": 1,
+  "data": {
+    "databaseName": "myDatabase",
+    "databaseVersion": 1,
+    "tables": [
+      {
+        "name": "blocks",
+        "schema": "++id,type",
+        "rowCount": 15
+      },
+      {
+        "name": "blockRelations",
+        "schema": "++id,fromType,fromId,toType,toId",
+        "rowCount": 8
+      },
+      {
+        "name": "subjects",
+        "schema": "++id,text,complexity,topicId",
+        "rowCount": 34
+      },
+      {
+        "name": "questions",
+        "schema": "++id,text,subjectId",
+        "rowCount": 0
+      }
+    ],
+    "data": [{
+      "tableName": "blocks",
+      "inbound": true,
+      "rows": [
+        {
+          "type": "AREA",
+          "name": "General",
+          "id": 1
+        },
+        {
+          "type": "AREA",
+          "name": "Management",
+          "id": 2
+        },
+        {
+          "type": "AREA",
+          "name": "Software Design",
+          "id": 3
+        },
+        {
+          "type": "AREA",
+          "name": "Frontend",
+          "id": 4
+        },
+        {
+          "type": "AREA",
+          "name": "Backend",
+          "id": 5
+        },
+        {
+          "type": "AREA",
+          "name": "Security",
+          "id": 6
+        },
+        {
+          "type": "TOPIC",
+          "name": "🧱 Data structures and algorithms",
+          "id": 7
+        },
+        {
+          "type": "TOPIC",
+          "name": "🎋 Git",
+          "id": 8
+        },
+        {
+          "type": "TOPIC",
+          "name": "⌛ Estimation",
+          "id": 9
+        },
+        {
+          "type": "TOPIC",
+          "name": "🌀 SDLC",
+          "id": 10
+        },
+        {
+          "type": "TOPIC",
+          "name": "🎨 Design patterns",
+          "id": 11
+        },
+        {
+          "type": "TOPIC",
+          "name": "🎓 OOP",
+          "id": 12
+        },
+        {
+          "type": "TOPIC",
+          "name": "🧩 State management",
+          "id": 13
+        },
+        {
+          "type": "TOPIC",
+          "name": "🛠️ Frontend infrastructure",
+          "id": 14
+        },
+        {
+          "type": "AREA",
+          "name": "DevOps",
+          "id": 15
+        }
+      ]
+    },{
+      "tableName": "blockRelations",
+      "inbound": true,
+      "rows": [
+        {
+          "fromType": "AREA",
+          "fromId": 1,
+          "toType": "TOPIC",
+          "toId": 7,
+          "id": 1
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 1,
+          "toType": "TOPIC",
+          "toId": 8,
+          "id": 2
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 2,
+          "toType": "TOPIC",
+          "toId": 9,
+          "id": 3
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 2,
+          "toType": "TOPIC",
+          "toId": 10,
+          "id": 4
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 3,
+          "toType": "TOPIC",
+          "toId": 11,
+          "id": 5
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 3,
+          "toType": "TOPIC",
+          "toId": 12,
+          "id": 6
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 4,
+          "toType": "TOPIC",
+          "toId": 13,
+          "id": 7
+        },
+        {
+          "fromType": "AREA",
+          "fromId": 4,
+          "toType": "TOPIC",
+          "toId": 14,
+          "id": 8
+        }
+      ]
+    },{
+      "tableName": "subjects",
+      "inbound": true,
+      "rows": [
+        {
+          "topicId": 7,
+          "complexity": "ENTRY",
+          "text": "Main data types (string, array, object, etc)",
+          "id": 1
+        },
+        {
+          "topicId": 7,
+          "complexity": "ENTRY",
+          "text": "Main language constructs (conditionals, loops, try-catch, etc)",
+          "id": 2
+        },
+        {
+          "topicId": 7,
+          "complexity": "ENTRY",
+          "text": "Algorithmic problems (use services like leetcode to practice)",
+          "id": 3
+        },
+        {
+          "topicId": 7,
+          "complexity": "ENTRY",
+          "text": "Basics of the most popular data structures (stack, queue, array, hash map, tree, graph)",
+          "id": 4
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Main data structures and their use cases",
+          "id": 5
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Binary tree",
+          "id": 6
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Balanced search trees",
+          "id": 7
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Graph, tree, DFS, BFS, working with graphs",
+          "id": 8
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Queue, Priority queue, Stack",
+          "id": 9
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Array, multidimensional array",
+          "id": 10
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Hash map",
+          "id": 11
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "Linked list, double linked list",
+          "id": 12
+        },
+        {
+          "topicId": 7,
+          "complexity": "INTERMEDIATE",
+          "text": "BigO notation, algorithm’s complexity",
+          "id": 13
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "What is VCS?",
+          "id": 14
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Git and git cli",
+          "id": 15
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Creating a repository (git init)",
+          "id": 16
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Staging area (git add)",
+          "id": 17
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Committing (git commit)",
+          "id": 18
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Branching and merging (git branch, git checkout, git merge)",
+          "id": 19
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Resolving merge conflicts",
+          "id": 20
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Working with remote repositories (push/pull/fetch)",
+          "id": 21
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "GitHub",
+          "id": 22
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "What is a Pull Request?",
+          "id": 23
+        },
+        {
+          "topicId": 8,
+          "complexity": "ENTRY",
+          "text": "Creating/merging PRs",
+          "id": 24
+        },
+        {
+          "topicId": 8,
+          "complexity": "INTERMEDIATE",
+          "text": "Git log",
+          "id": 25
+        },
+        {
+          "topicId": 8,
+          "complexity": "INTERMEDIATE",
+          "text": "Finding commits",
+          "id": 26
+        },
+        {
+          "topicId": 8,
+          "complexity": "INTERMEDIATE",
+          "text": "Reverting changes (git revert, git reset)",
+          "id": 27
+        },
+        {
+          "topicId": 8,
+          "complexity": "INTERMEDIATE",
+          "text": "Git stash",
+          "id": 28
+        },
+        {
+          "topicId": 8,
+          "complexity": "INTERMEDIATE",
+          "text": "Branch management, branching workflows",
+          "id": 29
+        },
+        {
+          "topicId": 8,
+          "complexity": "INTERMEDIATE",
+          "text": "Tagging",
+          "id": 30
+        },
+        {
+          "topicId": 8,
+          "complexity": "ADVANCED",
+          "text": "Recovering from issues",
+          "id": 31
+        },
+        {
+          "topicId": 8,
+          "complexity": "ADVANCED",
+          "text": "Git reset (hard, soft)",
+          "id": 32
+        },
+        {
+          "topicId": 8,
+          "complexity": "ADVANCED",
+          "text": "Gitflow",
+          "id": 33
+        },
+        {
+          "topicId": 8,
+          "complexity": "ADVANCED",
+          "text": "Git bisect",
+          "id": 34
+        }
+      ]
+    },{
+      "tableName": "questions",
+      "inbound": true,
+      "rows": []
+    }]
+  }
+}

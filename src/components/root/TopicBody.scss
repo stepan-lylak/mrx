@@ -1,0 +1,36 @@
+@use 'sass:color';
+
+.set-collapse-label {
+  display: flex;
+  justify-content: space-between;
+  .ant-rate-star-zero {
+    .anticon {
+      color: darkgray;
+    }
+  }
+
+  .ant-rate-star-full {
+    .anticon-frown {
+      color: #ff0000;
+    }
+    .anticon-meh {
+      color: #ff6600;
+    }
+    .anticon-smile {
+      color: #7ACC00;
+    }
+  }
+
+}
+
+.r1 {
+  background-color: lighten(#ff0000, 45%);
+}
+
+.r2 {
+  background-color: lighten(#ff6600, 40%);
+}
+
+.r3 {
+  background-color: lighten(#7ACC00, 55%);
+}

@@ -1,0 +1,32 @@
+.su-page {
+    > main {
+        display: flex;
+        > aside {
+            overflow: auto;
+            //flex: 0 0 300px;
+            width: 300px;
+            background-color: #eceff1;
+            padding: 20px 30px;
+            position: sticky;
+            top: 78px;
+            height: calc(100vh - 78px);
+            z-index: 10;
+            box-sizing: border-box;
+            resize: horizontal;
+            h4 {
+                margin-top: 0;
+            }
+            .ant-tree {
+                background-color: transparent;
+                .ant-tree-title {
+                    display: flex;
+                    justify-content: space-between;
+                }
+            }
+        }
+        > section {
+            padding: 20px 30px 30px;
+            flex: 1;
+        }
+    }
+}
