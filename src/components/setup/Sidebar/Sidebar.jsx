@@ -1,4 +1,4 @@
-import {Button, Tree, Typography} from "antd";
+import {Button, Empty, Tree, Typography} from "antd";
 import {ApartmentOutlined, AppstoreOutlined, DeleteOutlined, FormOutlined} from "@ant-design/icons";
 import useSidebarData from "@/components/setup/Sidebar/useSidebarData";
 import {isEmpty} from "lodash/lang";
@@ -20,14 +20,12 @@ const showLine = {
     }
 }
 
-export default function Sidebar({setBlockIds}) {
+export default function Sidebar({ setBlockIds }) {
     const treeData = useSidebarData();
-
-    if(isEmpty(treeData)) return null;
 
     return <>
         <Title level={4}>Structure</Title>
-        <Tree
+        {isEmpty(treeData) ? <Empty image={Empty.PRESENTED_IMAGE_SIMPLE}/>: <Tree
             blockNode={true}
             defaultExpandAll={true}
             showLine={showLine}
@@ -37,7 +35,7 @@ export default function Sidebar({setBlockIds}) {
             treeData={treeData}
             // multiple={true}
             titleRender={titleRender}
-        />
+        />}
     </>
 }
 

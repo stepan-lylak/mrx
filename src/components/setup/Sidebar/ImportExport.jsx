@@ -1,6 +1,4 @@
-"use client"
-
-import {Button, Upload} from "antd";
+import {Button, Flex, Upload} from "antd";
 import {UploadOutlined} from "@ant-design/icons";
 import {db} from "../../../db/db.jsx";
 import download from 'downloadjs';
@@ -28,14 +26,14 @@ const props = {
 };
 
 export default function ImportExport() {
-    return <>
+    return <Flex gap="small" wrap="wrap" vertical style={{paddingTop: 20}}>
         <Button type="dashed" onClick={function () {
             exportDb();
         }}>Export DB</Button>
         <Upload {...props}>
             <Button type="dashed" icon={<UploadOutlined />}>Import DB</Button>
         </Upload>
-    </>;
+    </Flex>;
     async function exportDb() {
         try {
             const blob = await db.export({prettyJson: true, progressCallback});

@@ -10,7 +10,7 @@ function App() {
     return (
         <div className="layout-container">
             <header>
-                <Title level={2}>Header</Title>
+                <Title level={2}>MRX</Title>
                 <Flex gap="small" wrap="wrap">
                     <NavLink to="/">
                         {({isActive}) => (
